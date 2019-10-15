@@ -43,3 +43,9 @@ I got a better understanding of NodeJS basics, like starting and interacting wit
 ![functional-javascript-workshop done](node_basic_1/functional-js-finished.png)
 
 My previous JS experience is not so diverse and commonly limited to DOM manipulations. So there many things that were new to me, eg, blocking event looping, currying, function spies, partial application without using .bind and trampoline. Also, sometimes JS works in mysterious ways and it's hard to understand how and why to use this or that thing on real do. Thereby I need more practice for a better understanding of functional JS in some parts.
+
+### stream adventure workshop
+
+![stream-adventure-done](node_basic_1/stream-adventure-finished.png)
+
+Streams are a very interesting and useful thing for me as a web developer. There're many new things for me, that I can use in projects. For example, piping is a really great tool for chaining actions on the same data input stream. Through module are also helpful in it. But there are some deprecated tools used in some tasks that do not give a feeling of doing something really useful.
