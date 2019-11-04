@@ -84,3 +84,13 @@ Streams are a very interesting and useful thing for me as a web developer. There
 ```Heap - 7fffeeb51000-7fffeeb72000```, ```Stack - 7ffff5d52000-7ffff6552000```, ```MMS - 7f62d1200000-7f62d13e7000```
 
 Memory management is new for me at many things. I only have experience with high-level languages ​​that have garbage collection algorithms. I have never had to optimize memory usage in my applications before. Therefore, for a better understanding, I need to practice more on real cases when saving every byte of memory is really necessary.
+
+## TCP. UDP. Network
+
+![Internet 101 - done](task_networks/01-internet-101-done.png)
+
+Just a simple and cool refresh of known facts.
+
+![Networking for Web Developers - done](task_networks/02-networking-done.png)
+
+Many things from this course are also well known. It was useful to learn some tricks of using command-line utilities for interacting with traffic and port monitoring (like nc and tcpdump). New for me was TCP flags meanings, TTL values in ping tool. Also, I got a deeper understanding of routing and packets transmission rules. I think nc tool is very interesting for the future using in the development process.
