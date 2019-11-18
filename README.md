@@ -94,3 +94,55 @@ Just a simple and cool refresh of known facts.
 ![Networking for Web Developers - done](task_networks/02-networking-done.png)
 
 Many things from this course are also well known. It was useful to learn some tricks of using command-line utilities for interacting with traffic and port monitoring (like nc and tcpdump). New for me was TCP flags meanings, TTL values in ping tool. Also, I got a deeper understanding of routing and packets transmission rules. I think nc tool is very interesting for the future using in the development process.
+
+## Http & Https
+
+Request user info:
+
+```curl https://api.github.com/users/IgorOsa```
+
+Request user info with headers:
+
+```curl -i https://api.github.com/users/IgorOsa```
+
+Request the list of user's starred gists with credentials provided in CLI:
+
+``` curl --user "IgorOsa:******" https://api.github.com/gists/starred```
+
+or with password prompted:
+
+```curl --user "IgorOsa" https://api.github.com/gists/starred```
+
+List repositories of "Kottans" organization:
+
+```curl -i https://api.github.com/orgs/kottans/repos```
+
+Creating a new issue in this repository:
+
+```curl --user "IgorOsa" -X POST -d '{"title":"Test issue","body":"Issue created for Http & Https task","labels":["test"]}' https://api.github.com/repos/IgorOsa/kottans-backend/issues```
+
+or a way to post an issue using auth token previously created in dev settings section on GitHub:
+
+```curl -i -H 'Authorization: token 837e******eca3' -d '{"title":"Test issue","body":"Issue created for Http & Https task using auth token","labels":["test"]}' https://api.github.com/repos/IgorOsa/kottans-backend/issues```
+
+### Questions & answers
+
+#### 1. Name at least three possible negative consequences of not using https
+
+* The main negative consequence is security. All other things are going from it.
+* HTTP uses an insecure connection, that easily may cause data interception by a man in the middle.
+* HTTP cannot provide any strong identity checks so we can't guarantee that we sending requests to the right server.
+* Users have more trust to web apps, that use secured by SSL/TLS connection so they don't need to worry about the safety of their' data.
+
+#### 2. Explain the main idea behind public key cryptography in few sentences
+
+This is asymmetric cryptography that means that we have a pair of security keys - public and private. The public key can be shared over the web without fear of compromising the system in which it is used. Encrypted data with public key can be decrypted only with the right private key, so it needs to hold the private key in secret.
+
+#### 3. You are creating an application for pet clinic. You need to implement the following functionality
+
+* add new pet (including name, age, breed, owner's name, medical history) - POST request includes in its body params age, breed, owner, etc. The server's response must be 200 (OK) or 201 (Created) with pet data in the body if the pet was added successfully, else return 400 Bad Request if error appear.
+* search pet by name - it can be GET request with name in query string, response 200 and pet data in the body.
+* change name of an existing pet - PUT request with name param in request body, response 200 if OK and 400 if we can't update data with name provided.
+* add new info about pet's health - POST request with pet's ID and health info in body, response with 200 (OK) and data created in the response body.
+* assign a pet to a particular doctor in the clinic - depending on how the database structure is implemented it can be PUT request to update a field in pets table with doctor's ID or a POST request with pet and doctor IDs into relations table.
+* register an appointment for a pet. This request should include info about pet, doctor and appointment date and time - POST request with a pet and doctor IDs, appointment date and time, response with 201 Created or 400 if error.
