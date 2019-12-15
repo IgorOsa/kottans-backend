@@ -151,4 +151,8 @@ This is asymmetric cryptography that means that we have a pair of security keys 
 
 ## File System
 
+[secret.txt](file_system/secret.txt) 
+
 ![secret.txt permissions screenshot](file_system/secret-txt.png)
+
+[file_system_task.js](file_system/file_system_task.js)
