@@ -146,3 +146,9 @@ This is asymmetric cryptography that means that we have a pair of security keys 
 * add new info about pet's health - POST request with pet's ID and health info in body, response with 200 (OK) and data created in the response body.
 * assign a pet to a particular doctor in the clinic - depending on how the database structure is implemented it can be PUT request to update a field in pets table with doctor's ID or a POST request with pet and doctor IDs into relations table.
 * register an appointment for a pet. This request should include info about pet, doctor and appointment date and time - POST request with a pet and doctor IDs, appointment date and time, response with 201 Created or 400 if error.
+
+## Architectural Patterns & Design Patterns
+
+## File System
+
+![secret.txt permissions screenshot](file_system/secret-txt.png)
