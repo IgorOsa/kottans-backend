@@ -151,8 +151,15 @@ This is asymmetric cryptography that means that we have a pair of security keys 
 
 ## File System
 
-[secret.txt](file_system/secret.txt) 
+[secret.txt](file_system/secret.txt)
 
 ![secret.txt permissions screenshot](file_system/secret-txt.png)
 
 [file_system_task.js](file_system/file_system_task.js)
+
+## NodeJS Runtime and Ecosystem
+
+I got better understanding of Node.js fundamntals, what JS engines is. Command line argument that enables ES modules ```--experimental-modules```.
+Because of my not very deep knowledge of NodeJS, I found many new things for me. For example, what EventEmitter is at the core of Node asynchronous event-driven architecture and many of Node's built-in modules are inherited from it.
+
+## Relational Databases Basics
